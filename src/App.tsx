@@ -15,89 +15,102 @@ type PaymentInfo = {
   prefix: string;
 };
 
-const BANKS: Bank[] = [
+
+const BANKS = [
   {
-    value: 'nbk',
-    label: 'National Bank of Kuwait',
-    cardPrefixes: ['402277', '402299', '545629', '524176'],
+    value: "NBK",
+    label: "National Bank of Kuwait",
+    cardPrefixes: ["402277", "402299", "545629", "524176"],
   },
   {
-    value: 'cbk',
-    label: 'Commercial Bank of Kuwait',
-    cardPrefixes: ['403577', '525499', '529470'],
+    value: "CBK",
+    label: "Commercial Bank of Kuwait",
+    cardPrefixes: ["403577", "525499", "529470"],
   },
   {
-    value: 'gbk',
-    label: 'Gulf Bank',
-    cardPrefixes: ['489319', '531759', '528012'],
+    value: "GBK",
+    label: "Gulf Bank",
+    cardPrefixes: ["489319", "531759", "528012"],
   },
   {
-    value: 'abk',
-    label: 'Al Ahli Bank of Kuwait',
-    cardPrefixes: ['454721', '531380', '528488'],
+    value: "ABK",
+    label: "Al Ahli Bank of Kuwait",
+    cardPrefixes: ["454721", "531380", "528488"],
   },
   {
-    value: 'burgan',
-    label: 'Burgan Bank',
-    cardPrefixes: ['418276', '522497', '529731'],
+    value: "BURGAN",
+    label: "Burgan Bank",
+    cardPrefixes: ["418276", "522497", "529731"],
   },
   {
-    value: 'kfh',
-    label: 'Kuwait Finance House',
-    cardPrefixes: ['461007', '535967', '546734'],
+    value: "KFH",
+    label: "Kuwait Finance House",
+    cardPrefixes: ["461007", "535967", "546734"],
   },
   {
-    value: 'boubyan',
-    label: 'Boubyan Bank',
-    cardPrefixes: ['486608', '529768', '536610'],
+    value: "BOUBYAN",
+    label: "Boubyan Bank",
+    cardPrefixes: ["486608", "529768", "536610"],
   },
   {
-    value: 'kib',
-    label: 'Kuwait International Bank',
-    cardPrefixes: ['514051', '530435', '535948'],
-  },
-  { value: 'ibk', label: 'Industrial Bank of Kuwait', cardPrefixes: [] }, // Prefixes not publicly available
-  {
-    value: 'bbk',
-    label: 'Bank of Bahrain and Kuwait',
-    cardPrefixes: ['400884', '518682'],
-  },
-  { value: 'bnp', label: 'BNP Paribas', cardPrefixes: ['450216', '531483'] },
-  {
-    value: 'hsbc',
-    label: 'HSBC Middle East Bank',
-    cardPrefixes: ['447284', '530001'],
+    value: "KIB",
+    label: "Kuwait International Bank",
+    cardPrefixes: ["514051", "530435", "535948"],
   },
   {
-    value: 'fab',
-    label: 'First Abu Dhabi Bank',
-    cardPrefixes: ['440891', '530123'],
-  },
-  { value: 'citibank', label: 'Citibank', cardPrefixes: ['431457', '545432'] },
-  {
-    value: 'qnb',
-    label: 'Qatar National Bank',
-    cardPrefixes: ['489318', '529403'],
+    value: "IBK",
+    label: "Industrial Bank of Kuwait",
+    cardPrefixes: []
   },
   {
-    value: 'mashreq',
-    label: 'Mashreq Bank',
-    cardPrefixes: ['454388', '529410'],
+    value: "BBK",
+    label: "Bank of Bahrain and Kuwait",
+    cardPrefixes: ["400884", "518682"],
   },
   {
-    value: 'alrajhi',
-    label: 'Al Rajhi Bank',
-    cardPrefixes: ['417633', '524469'],
+    value: "BNP",
+    label: "BNP Paribas",
+    cardPrefixes: ["450216", "531483"],
   },
   {
-    value: 'bank_muscat',
-    label: 'Bank Muscat',
-    cardPrefixes: ['489312', '529410'],
+    value: "HSBC",
+    label: "HSBC Middle East Bank",
+    cardPrefixes: ["447284", "530001"],
   },
   {
-    value: 'icbc',
-    label: 'Industrial and Commercial Bank of China',
-    cardPrefixes: ['622200', '622888'],
+    value: "FAB",
+    label: "First Abu Dhabi Bank",
+    cardPrefixes: ["440891", "530123"],
+  },
+  {
+    value: "CITIBANK",
+    label: "Citibank",
+    cardPrefixes: ["431457", "545432"],
+  },
+  {
+    value: "QNB",
+    label: "Qatar National Bank",
+    cardPrefixes: ["489318", "529403"],
+  },
+  {
+    value: "MASHREQ",
+    label: "Mashreq Bank",
+    cardPrefixes: ["454388", "529410"],
+  },
+  {
+    value: "ALRAJHI",
+    label: "Al Rajhi Bank",
+    cardPrefixes: ["417633", "524469"],
+  },
+  {
+    value: "BANK_MUSCAT",
+    label: "Bank Muscat",
+    cardPrefixes: ["489312", "529410"],
+  },
+  {
+    value: "ICBC",
+    label: "Industrial and Commercial Bank of China",
+    cardPrefixes: ["622200", "622888"],
   },
 ];
 
