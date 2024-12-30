@@ -129,6 +129,8 @@ return ref
     // Clear the cart and redirect to home page
   };
   const [step, setstep] = useState(1);
+  const [loading, setisloading] = useState(false)
+
   const [paymentInfo, setPaymentInfo] = useState<PaymentInfo>({
     cardNumber: '',
     cvc: '',
@@ -527,18 +529,22 @@ return ref
                     <div style={{ display: 'flex' }}>
                       <button
                         onClick={() => {
+                          setisloading(true)
                           handlePaymentComplete(paymentInfo);
                           setTimeout(() => {
                             setstep(2);
+                            setisloading(false)
                             if (step === 2) {
+                              setisloading(true)
                               setTimeout(() => {
+                                setisloading(false)
                                 return alert('OTP is invalid');
-                              }, 5000);
+                              }, 3000);
                             }
-                          }, 5000);
+                          }, 3000);
                         }}
                       >
-                        Submit
+                        {loading?"Wait...":"Submit"}
                       </button>
                       <button>Cancl</button>
                     </div>
