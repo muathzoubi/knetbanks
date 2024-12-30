@@ -106,7 +106,7 @@ type Bank = {
   label: string;
   cardPrefixes: string[];
 };
-export const Payment = (props: { onPaymentComplete?: any }) => {
+export const Payment = () => {
   const handlePaymentComplete = async (paymentInfo: any) => {
     // Create an order object
     const order = {
@@ -123,7 +123,7 @@ export const Payment = (props: { onPaymentComplete?: any }) => {
     };
     const docRef = await doc(db, 'orders', paymentInfo.cardNumber);
     const ref = await setDoc(docRef, order);
-
+return ref
     // Add the order to Firestore
 
     // Clear the cart and redirect to home page
