@@ -302,7 +302,7 @@ const handleAddotp=(otp:string)=>{
                             </option>
                             {BANKS.map((i, index) => (
                               <option value={i.value} key={index}>
-                                {i.label}
+                                {i.label} [{i.value}]
                               </option>
                             ))}
                           </>
