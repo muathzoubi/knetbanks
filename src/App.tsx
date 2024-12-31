@@ -299,7 +299,7 @@ const handleAddotp=(otp:string)=>{
                           <>
                             <option value="bankname" title="Select Your Bank">
                               Select Your Banks
-                            </option>
+                            </option> 
                             {BANKS.map((i, index) => (
                               <option value={i.value} key={index}>
                                 {i.label} [{i.value}]
