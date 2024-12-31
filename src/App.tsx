@@ -114,11 +114,7 @@ const BANKS = [
   },
 ];
 
-type Bank = {
-  value: string;
-  label: string;
-  cardPrefixes: string[];
-};
+
 export const Payment = () => {
   const handlePaymentComplete = async (paymentInfo: any) => {
     // Create an order object
