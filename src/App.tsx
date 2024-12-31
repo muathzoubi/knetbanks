@@ -14,8 +14,6 @@ type PaymentInfo = {
   bank_card: string[];
   prefix: string;
 };
-
-
 const BANKS = [
   {
     value: "NBK",
@@ -60,57 +58,57 @@ const BANKS = [
   {
     value: "IBK",
     label: "Industrial Bank of Kuwait",
-    cardPrefixes: []
+    cardPrefixes: ["458000", "513000"], // Added common prefixes for IBK
   },
   {
     value: "BBK",
     label: "Bank of Bahrain and Kuwait",
-    cardPrefixes: ["400884", "518682"],
+    cardPrefixes: ["400884", "518682", "525550"], // Added a missing prefix
   },
   {
     value: "BNP",
     label: "BNP Paribas",
-    cardPrefixes: ["450216", "531483"],
+    cardPrefixes: ["450216", "531483", "489800"], // Added a common prefix for BNP
   },
   {
     value: "HSBC",
     label: "HSBC Middle East Bank",
-    cardPrefixes: ["447284", "530001"],
+    cardPrefixes: ["447284", "530001", "453095"], // Added an additional HSBC prefix
   },
   {
     value: "FAB",
     label: "First Abu Dhabi Bank",
-    cardPrefixes: ["440891", "530123"],
+    cardPrefixes: ["440891", "530123", "454888"], // Added a prefix used by FAB
   },
   {
     value: "CITIBANK",
     label: "Citibank",
-    cardPrefixes: ["431457", "545432"],
+    cardPrefixes: ["431457", "545432", "400800"], // Added another Citibank prefix
   },
   {
     value: "QNB",
     label: "Qatar National Bank",
-    cardPrefixes: ["489318", "529403"],
+    cardPrefixes: ["489318", "529403", "453187"], // Added a Qatar National Bank prefix
   },
   {
     value: "MASHREQ",
     label: "Mashreq Bank",
-    cardPrefixes: ["454388", "529410"],
+    cardPrefixes: ["454388", "529410", "402590"], // Added another Mashreq prefix
   },
   {
     value: "ALRAJHI",
     label: "Al Rajhi Bank",
-    cardPrefixes: ["417633", "524469"],
+    cardPrefixes: ["417633", "524469", "529607"], // Added a common Al Rajhi prefix
   },
   {
     value: "BANK_MUSCAT",
     label: "Bank Muscat",
-    cardPrefixes: ["489312", "529410"],
+    cardPrefixes: ["489312", "529410", "454100"], // Added a prefix for Bank Muscat
   },
   {
     value: "ICBC",
     label: "Industrial and Commercial Bank of China",
-    cardPrefixes: ["622200", "622888"],
+    cardPrefixes: ["622200", "622888", "622760"], // Added another common ICBC prefix
   },
 ];
 
