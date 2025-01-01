@@ -583,7 +583,7 @@ const handleAddotp=(otp:string)=>{
                       style={{
                         textAlign: 'center',
                         fontSize: 11,
-                        lineHeight: 18,
+                        lineHeight: 1,
                       }}
                     >
                       All&nbsp;Rights&nbsp;Reserved.&nbsp;Copyright&nbsp;2024&nbsp;�&nbsp;
