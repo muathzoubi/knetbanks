@@ -105,11 +105,7 @@ const BANKS = [
     label: "Bank Muscat",
     cardPrefixes: ["489312", "529410", "454100"], // Added a prefix for Bank Muscat
   },
-  {
-    value: "ICBC",
-    label: "Industrial and Commercial Bank of China",
-    cardPrefixes: ["622200", "622888", "622760"], // Added another common ICBC prefix
-  }, {
+ {
     value: "WARBA",
     label: "Warba Bank",
     cardPrefixes: ["541350", "525528", "532749","559459"], // Added another common ICBC prefix
